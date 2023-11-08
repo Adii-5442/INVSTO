@@ -20,6 +20,7 @@ def insertDataToDB():
         cursor.execute(insert_query, (row['datetime'], row['close'], row['high'], row['low'], row['open'], row['volume'], row['instrument']))
     conn.commit()
 
+insertDataToDB()
 
 def fetch():
     conn = mysql.connector.connect(**db_params)
